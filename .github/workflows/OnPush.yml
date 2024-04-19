@@ -32,11 +32,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v1
         with:
-          java-version: 11
+          distribution: 'oracle'
+          java-version: 17
       - run: curl -sSLO https://github.com/pinterest/ktlint/releases/download/1.2.1/ktlint && chmod a+x ktlint
       - name: Run ktlint (Android)
         run: |
-          ./ktlint -F "**/src/**/*.kt" "!**/generated/**" --android --reporter=plain?group_by_file --disabled_rules=max-line-length
+          ./ktlint -F "**/src/**/*.kt" "!**/generated/**" --reporter=plain?group_by_file
   unit_tests:
     name: Unit Tests
     runs-on: [ubuntu-latest]
@@ -44,7 +45,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v1
         with:
-          java-version: 11
+          distribution: 'oracle'
+          java-version: 17
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
       - uses: gradle/gradle-build-action@v2.3.3
@@ -120,7 +122,8 @@ jobs:
           submodules: true
       - uses: actions/setup-java@v1
         with:
-          java-version: 11
+          distribution: 'oracle'
+          java-version: 17
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
       - name: Build Library
@@ -204,7 +207,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v1
         with:
-          java-version: 11
+          distribution: 'oracle'
+          java-version: 17
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
       - uses: actions/download-artifact@v3
