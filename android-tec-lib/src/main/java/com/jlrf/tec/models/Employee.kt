@@ -5,5 +5,6 @@ public data class Employee(
     val name: String,
     val salary: Double,
     val age: Int,
-    val profileImage: String
+    val profileImage: String,
+    val message: String? = null
 )
