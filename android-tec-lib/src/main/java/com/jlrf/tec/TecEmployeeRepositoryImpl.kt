@@ -10,7 +10,8 @@ public class TecEmployeeRepositoryImpl : TecEmployeesRepository {
             name = "Jose Luis",
             salary = 23000.0,
             age = 30,
-            profileImage = ""
+            profileImage = "",
+            message = "Lo que sea!"
         )
     }
 
@@ -36,7 +37,15 @@ public class TecEmployeeRepositoryImpl : TecEmployeesRepository {
                 salary = 45000.0,
                 age = 45,
                 profileImage = ""
-            )
+            ),
+            Employee(
+                id = 1234567893L,
+                name = "Luis Fernandez",
+                salary = 500000.0,
+                age = 30,
+                profileImage = "",
+                message = "Hallo Leute!"
+            ),
         )
     }
 }
