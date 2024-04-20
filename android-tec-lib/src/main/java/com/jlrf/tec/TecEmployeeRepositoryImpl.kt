@@ -6,11 +6,12 @@ public class TecEmployeeRepositoryImpl : TecEmployeesRepository {
 
     override fun getMyProfile(): Employee {
         return Employee(
-            id = 1234567890L,
-            name = "Jose Luis",
-            salary = 23000.0,
-            age = 30,
-            profileImage = ""
+            id = 1234567120L,
+            name = "Jose Ramon",
+            salary = 0.0,
+            age = 22,
+            profileImage = "",
+            message = "Oh si hermano"
         )
     }
 
@@ -36,6 +37,14 @@ public class TecEmployeeRepositoryImpl : TecEmployeesRepository {
                 salary = 45000.0,
                 age = 45,
                 profileImage = ""
+            ),
+            Employee(
+                id = 1234567893L,
+                name = "Jose Ramon",
+                salary = 999999.99999,
+                age = 22,
+                profileImage = "",
+                message = "Hola Linux"
             )
         )
     }
