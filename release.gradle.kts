@@ -7,7 +7,7 @@ fun Project.getExtra(extraKey: String, tryRoot: Boolean = true): String? =
         null
     }
 
-val BUILD_VERSION = System.getenv("BUILD_VERSION") ?: "0.0.5-beta"
+val BUILD_VERSION = System.getenv("BUILD_VERSION") ?: "0.0.6-beta"
 extra["artifactVersion"] = BUILD_VERSION
 extra["artifactGroup"] = System.getenv("ARTIFACT_GROUP") ?: "com.jlrf.tec"
 
